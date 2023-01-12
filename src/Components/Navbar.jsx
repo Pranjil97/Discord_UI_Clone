@@ -3,9 +3,9 @@ import icon from '../assets/discord_main_logo.svg'
 
 const Navbar = () => {
     return (
-        <div className='bg-[#5865f2] h-20 flex my-auto justify-center'>
-            <img src={icon} alt="discord" className='h-[35px] my-auto ' />
-            <span className="text-base font-medium text-white my-auto mx-[200px]">
+        <div className='bg-[#5865f2] h-20 flex my-auto justify-center shrink'>
+            <img src={icon} alt="discord" className='h-[35px] my-auto' />
+            <span className="invisible lg:visible text-base font-medium text-white my-auto xl:mx-[200px] lg:mx-[60px] ">
                 <a href="" className='mx-5 hover:underline'>Download</a>
                 <a href="" className='mx-5 hover:underline'>Nitro</a>
                 <a href="" className='mx-5 hover:underline'>Discover</a>

@@ -3,7 +3,7 @@ import qr from '../assets/qr_code.png'
 
 const Login = () => {
   return (
-    <div className='bg-black w-full h-[100vh] flex justify-center place-items-center'>
+    <div id='login' className='bg-black w-full h-[100vh] flex justify-center place-items-center'>
         <div className='bg-gray-700 h-[400px] w-[780px] flex space-x-2 rounded'>
             <div className='text-white bg-gray-700 w-full flex flex-col place-items-center rounded'>
                 <h1 className='mt-[25px] text-[25px] font-medium ml-[10px]'>Welcome back!</h1>

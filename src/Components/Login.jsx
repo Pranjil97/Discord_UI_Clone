@@ -1,7 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import qr from '../assets/qr_code.png'
+import {FaEye, FaEyeSlash} from 'react-icons/fa'
+
 
 const Login = () => {
+
+    const [visible, setVisible] = useState(false)
+
   return (
     <div id='login' className='bg-black w-full h-[100vh] flex justify-center place-items-center'>
         <div className='bg-gray-700 h-[400px] w-[780px] flex space-x-2 rounded'>
@@ -10,9 +15,9 @@ const Login = () => {
                 <span className='text-gray-400 mt-2 text-[14px] '>We're so excited to see you again!</span>
                 <form className='flex flex-col w-[400px] ml-[30px] mt-[15px]'>
                     <span className='uppercase flex font-bold text-[12px] text-gray-300 mb-[5px]'>email or phone number<div className='text-red-600'>*</div></span>
-                    <input type='email' className='bg-zinc-900 h-[40px] rounded mt-[6px]'/>
+                    <input type='email' className='bg-zinc-900 h-[40px] rounded mt-[6px] p-2'/>
                     <span className='text-[13px] flex font-medium mt-[15px] uppercase text-gray-400 mb-[5px]'>password<div className='text-red-600'>*</div></span>
-                    <input type='password' className='bg-zinc-900 h-[40px] rounded'/>
+                    <input type={visible? 'text' : 'password'} className='bg-zinc-900 h-[40px] p-2 rounded'/>  <div onClick={()=>setVisible(!visible)} className='-mt-[28px] ml-[370px] mb-[10px]'>{visible? <FaEye/>: <FaEyeSlash/>}</div>
                     <a className='text-[#00b0f4] text-[14px] mt-[2px]'>Forgot your password?</a>
                     <button className='w-[400px] h-[40px] bg-[#515ff7] mt-[20px] font-medium text-[15px]'>Log In</button>
                     <span className='text-[14px] text-gray-400 mt-[5px]'>Need an account?<a className='text-[#00b0f4] font-medium ml-[5px]'>Register</a></span>

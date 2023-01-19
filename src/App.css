@@ -12,3 +12,10 @@
 	background-repeat: no-repeat;
 	background-image: url('../src/assets/login_bg.svg');
 }
+
+#register{
+	background: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../src/assets/login_bg.svg');
+}

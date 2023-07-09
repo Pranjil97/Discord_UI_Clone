@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import discord from "../assets/discord_main_logo.svg";
+import { useNavigate } from "react-router-dom";
+
 const Register = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -76,7 +79,9 @@ const Register = () => {
             <button className="bg-blue-500 font-medium w-full text-white py-2 px-4 rounded hover:bg-blue-600">
               Continue
             </button>
-            <div className="text-[12px] text-[#00b0f4] mt-[10px]">
+            <div className="text-[12px] text-[#00b0f4] mt-[10px] cursor-pointer hover:underline" onClick={() => {
+              navigate('/login')
+            }}>
               Already have an account !
             </div>
           </form>
